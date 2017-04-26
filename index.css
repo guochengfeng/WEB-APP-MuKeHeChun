@@ -1,0 +1,245 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.wrap {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+/*音乐*/
+.music {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 99;
+}
+.music-wrap {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 5px solid #ef1639;
+	background-color: #fff;
+	padding: 5px;
+}
+.music-disc {
+	position: absolute;
+	z-index: 100;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	animation: rotate 5s infinite linear;
+}
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.music-pointer {
+	position: absolute;
+	z-index: 101;
+	width: 15px;
+	right: 0;
+	top: 10px;
+}
+/*三页内容容器*/
+.main-wrap {
+	width: 100vw;
+	height: 300vh;
+	margin: 0 auto;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: rollA ease 3s 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes rollA {
+	0% {
+		top: 0;
+	}
+	100% {
+		top: -100vh;
+	}
+}
+/*后两页内容容器*/
+.main-wrap-2 {
+	width: 100vw;
+	height: 200vh;
+	margin: 0 auto;
+	box-sizing: border-box;
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	animation: rollB ease 3s 11s;
+	animation-fill-mode: forwards;
+}
+@keyframes rollB {
+	0% {
+		top: 100vh;
+	}
+	100% {
+		top: 0vh;
+	}
+}
+/*第一页*/
+.page1 {
+	background: url(imgs/p1_bg.jpg) no-repeat;
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+}
+.page1-main {
+	width: 25vh;
+	height: 68vh;
+	margin: 0 auto;
+	position: relative;
+	background: url(imgs/p1_lantern.png) no-repeat;
+	background-size: 100%;
+	padding-top: 19.5vh;
+	box-sizing: border-box;
+}
+.page1-main .text {
+	width: 25vh;
+	height: 25vh;
+	border-radius: 50%;
+	color: #fff;
+	padding-top: 6vh;
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 98;
+}
+.page1 .text p {
+	font-weight: bold;
+	font-size: 6vw;
+}
+.page1-main .lantern-wrap {
+	width: 30vh;
+	height: 30vh;
+	border-radius: 50%;
+	line-height: 30vh;
+	text-align: center;
+	position: absolute;
+	z-index: 97;
+	top: 16.5vh;
+	left: -4vw;
+}
+.page1-main .lantern {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20vh;
+	height: 20vh;
+	border-radius: 50%;
+	background-color: rgb(223,11,59);
+	animation: tiaodong 0.5s infinite alternate;
+}
+/*第一页类心脏跳动动画*/
+@keyframes tiaodong {
+	from {
+		box-shadow: 0px 0px 4vw 4vw #d60b3b;
+	}
+	to {
+		box-shadow: 0px 0px 8vw 8vw #d60b3b;
+	}
+}
+.page1 .p1-imooc {
+	margin-top: 8vh;
+	width: 15vh;
+}
+.page1 p {
+	font-family: Arial;
+	font-size: 12px;
+	margin: -1vh auto 4vh; 
+}
+/*第二页*/
+.page2 {
+	background: url(imgs/p2_bg.jpg) no-repeat;
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+.page2 .p2-2016 {
+	width: 30vw;
+	position: absolute;
+	top: 50vh;
+	left: 35vw;
+}
+.page2 .p2-circle-inner {
+	width: 40vw;
+	position: absolute;
+	top: 42vh;
+	left: 30vw;
+	animation: rotateA 1s 6s infinite alternate;
+}
+/*逆时针旋转动画*/
+@keyframes rotateA {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+.page2 .p2-circle-middle {
+	width: 55vw;
+	position: absolute;
+	top: 38vh;
+	left: 23vw;
+	animation: rotateB 1s 7s infinite alternate;
+}
+/*顺时针旋转动画*/
+@keyframes rotateB {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.page2 .p2-circle-outer {
+	width: 70vw;
+	position: absolute;
+	top: 34vh;
+	left: 16vw;
+	animation: rotateA 1s 8s infinite alternate;
+}
+/*第三页*/
+.page3 {
+	background: url(imgs/p3_bg.jpg) no-repeat;
+	text-align: center;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+}
+.p3-logo {
+	width: 35vw;
+	margin: 8vh auto 6vh;
+}
+.p3-title {
+	width: 47vw;
+}
+.p3-couplet-first {
+	position: absolute;
+	right: 4vw;
+	top: 27vh;
+	width: 25vw;
+	height: 36vh;
+}
+.p3-couplet-second {
+	position: absolute;
+	left: 4vw;
+	top: 27vh;
+	width: 25vw;
+	height: 36vh;
+}
+.p3-blessing {
+	width: 33vw;
+	margin-top: 3vh;
+	animation: rotateB 2s 14s infinite linear;
+}
